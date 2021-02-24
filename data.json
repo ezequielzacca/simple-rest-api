@@ -1,0 +1,45 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Coca Cola",
+            "measurementUnitId": 1,
+            "categoryId": 1,
+            "size": 1.5
+        },
+        {
+            "id": 1,
+            "name": "Pepsi",
+            "measurementUnitId": 1,
+            "categoryId": 1,
+            "size": 2
+        },
+        {
+            "id": 1,
+            "name": "Pringles",
+            "measurementUnitId": 2,
+            "categoryId": 2,
+            "size": 350
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Soda"
+        },
+        {
+            "id": 2,
+            "name": "Snack"
+        }
+    ],
+    "measurementUnits": [
+        {
+            "id": 1,
+            "name": "Litres"
+        },
+        {
+            "id": 2,
+            "name": "Grams"
+        }
+    ]
+}
