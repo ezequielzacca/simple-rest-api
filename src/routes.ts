@@ -1,28 +1,18 @@
 import { Router } from "express";
 import data from "../data.json";
-
+let counter: number = 0;
 export const appRouter: Router = Router();
 
-appRouter.get("/products", (req, res) => {
-    return res.json(data.products);
+appRouter.get("/counter", (req, res) => {
+    return res.json({
+        counter
+    });
 })
 
-appRouter.get<{ id: string }>("/products/:id", (req, res) => {
-    return res.json(data.products.find(p => p.id === +req.params.id));
+appRouter.post<{ ammount: number }>("/counter/increment", (req, res) => {
+    counter++;
+    return res.json({
+        counter
+    });
 })
 
-appRouter.get("/categories", (req, res) => {
-    return res.json(data.categories);
-})
-
-appRouter.get<{ id: string }>("/categories/:id", (req, res) => {
-    return res.json(data.categories.find(p => p.id === +req.params.id));
-})
-
-appRouter.get("/measurement/units", (req, res) => {
-    return res.json(data.measurementUnits);
-})
-
-appRouter.get<{ id: string }>("/measurement/units/:id", (req, res) => {
-    return res.json(data.measurementUnits.find(p => p.id === +req.params.id));
-})
